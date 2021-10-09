@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Annual CO2 Emissions per Country",
     "width": 600,
-    "height": 450,
+    "height": 300,
     "background": "#e8e8e4",
     "projection": {"type": "equirectangular"},
 
