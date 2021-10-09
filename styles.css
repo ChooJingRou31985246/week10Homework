@@ -1,0 +1,26 @@
+.vis-container {
+    width: 100%;
+}
+
+.page {
+    width: 1024px;
+    background-color: lightgray;
+    margin: auto;
+    padding: 50px;
+    padding-top: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.pure-g {
+	float: left;
+	padding: 5px;
+  }
+  
+/* Clearfix (clear floats) */
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+
+.h1 {text-align: center;}
