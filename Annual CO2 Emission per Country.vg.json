@@ -3,7 +3,7 @@
     "title": "Annual CO2 Emissions per Country",
     "width": 600,
     "height": 400,
-    "background": "null",
+    "background": "#e8e8e4",
     "projection": {"type": "equirectangular"},
 
     "params": [
