@@ -59,7 +59,7 @@
                 "color": {
                     "field": "Annual CO2 emissions",
                     "type": "quantitative",
-                    "scale": {"type":"log", "range": ["#eae2b7", "#d00000"]},
+                    "scale": {"type":"log","domain": [5000,10000000000], "range": ["#eae2b7", "#d00000"]},
                     "legend": {"format": ".2s", "title": "CO2 amount (ton)"}
                 },
                 "tooltip": [
