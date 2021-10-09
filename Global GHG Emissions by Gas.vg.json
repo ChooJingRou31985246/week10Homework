@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Global Greenhouse Gas Emissions by Gas",
   "background": "#e8e8e4",
-  "width": 300,
-  "height": 300,
+  "width": 450,
+  "height": 450,
 
   "data": {
       "url": "https://raw.githubusercontent.com/ChooJingRou31985246/FIT3179-Project2/main/Source/Global-GHG-Emissions-by-gas.csv"
