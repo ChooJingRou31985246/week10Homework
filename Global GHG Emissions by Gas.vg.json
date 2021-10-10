@@ -1,13 +1,37 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Global Greenhouse Gas Emissions by Gas",
-  "background": "#e8e8e4",
   "width": 300,
   "height": 300,
+  "background": "#e8e8e4",
 
   "data": {
       "url": "https://raw.githubusercontent.com/ChooJingRou31985246/FIT3179-Project2/main/Source/Global-GHG-Emissions-by-gas.csv"
   },
+
+  "params": [
+    {
+      "name": "Gases_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Carbon dioxide (CO2)",
+          "F-gases (HFCs, CFCs, SF6)",
+          "Methane (CH4)",
+          "Nitrous oxide (N2O)"
+        ],
+        "labels":[
+          "Show All",
+          "Carbon dioxide",
+          "F-gases",
+          "Methane",
+          "Nitrous oxide"
+        ],
+        "name": "Gases Selection: "
+      }
+    }
+  ],
 
   "encoding": {
     "theta": {"field": "Percentage", "type": "quantitative", "stack": true},
@@ -30,13 +54,7 @@
             ]
         }        
     },
-    "opacity": {
-        "condition": {
-          "test": "datum['Gases'] == 'Carbon dioxide (CO2)'",
-          "value": 1
-        },
-        "value": 0.5
-    },
+
     "tooltip": [
         {"field": "Gases", "type": "nominal"},
         {"field": "Percentage", "type": "quantitative", "format": ".2%" }
@@ -49,8 +67,16 @@
           "type": "arc", 
           "innerRadius": 100,
           "stroke": "white",
-          "strokeWidth": 2,
-          "cursor": "pointer"
+          "strokeWidth": 2
+        },
+        "encoding": {
+          "opacity":{
+            "condition": {
+              "test": "datum['Gases'] == Gases_selection",
+              "value": 1
+            },
+            "value": 0.4
+          }
         }
       },
       {
